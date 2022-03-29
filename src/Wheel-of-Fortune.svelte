@@ -3,8 +3,8 @@
   import { createEventDispatcher } from "svelte";
 
   const dispatch = createEventDispatcher();
-  const winEvent = () => {dispatch('winEvent', {amount: 50})};
-  const loseEvent = () => {dispatch('loseEvent'), {amount: 50}};
+  const winEvent = () => {dispatch('win', {amount: 50})};
+  const loseEvent = () => {dispatch('lose'), {amount: 50}};
   let deg = 0;
   let zoneSize = 45; // deg
   // Counter clockwise
@@ -60,11 +60,11 @@
     const winningSymbolNr = Math.ceil(actualDeg / zoneSize);
     if (display.innerHTML === symbolSegments[winningSymbolNr]) {
       display.innerHTML = '+50';
-      dispatch('winEvent', {amount: 50})
+      dispatch('win', {amount: 50})
     }
     else {
       display.innerHTML = '-50';
-      dispatch('loseEvent', {amount: 50})
+      dispatch('lose', {amount: 50})
     }
     //display.innerHTML = symbolSegments[winningSymbolNr];
     rolling = false;
