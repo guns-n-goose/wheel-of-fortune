@@ -1,10 +1,13 @@
+<svelte:head>
+  Wheel of Fortune
+</svelte:head>
 <script>
   import { onMount } from "svelte";
   import { createEventDispatcher } from "svelte";
 
   const dispatch = createEventDispatcher();
-  winAmount = 50;
-  loseAmount = 50;
+  let winAmount = 50;
+  let loseAmount = 50;
   let deg = 0;
   let zoneSize = 45; // deg
   // Counter clockwise
