@@ -4,7 +4,7 @@ This is a simple wheel of fortune game developed using svelte
 ## Usage Example
 ```html
 <script>
-import WheelOfFortune from 'https://api.deno.land/webhook/gh/svelte_wheel_of_fortune';
+import WheelOfFortune from 'https://deno.land/x/svelte_wheel_of_fortune';
 </script>
 
 <div>
